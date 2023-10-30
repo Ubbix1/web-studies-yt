@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your HTML Example</title>
+    <style>
+        .text {
+            position: absolute;
+            left: 750px;
+            top: 681px;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        .loader {
+            width: 0;
+        }
+        video {
+            clip-path: ellipse(150px 150px at 667px 263px);
+            z-index: 11;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p>Press and hold</p>
+        <div class="loader">
+            <p>Press and hold</p>
+        </div>
+    </div>
+
+    <video rel="preload" src="https://ik.imagekit.io/sheryians/final_forest_2_vYhxXL_iiN.mp4?updatedAt=1697664185089" id="video1" playsinline autoplay muted loop></video>
+</body>
+</html>

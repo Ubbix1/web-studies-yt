@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Mouse Pointer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('/pictures/pic2.webp') center/cover;
+            border-radius: 50%;
+            pointer-events: none; /* This allows the mouse to interact with elements beneath the circle */
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+
+    <script>
+        const circle = document.querySelector('.circle');
+
+        // Add a mousemove event listener to update the circle's position
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Set the circle's position to the mouse coordinates
+            circle.style.left = x - 50 + 'px'; // Adjust for circle width
+            circle.style.top = y - 50 + 'px';  // Adjust for circle height
+        });
+    </script>
+</body>
+</html>

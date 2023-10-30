@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Advanced Love Calculator</title>
+   <meta property="og:title" content="Love Calculator" />
+   <meta property="og:description"
+      content="This website will calculate the percentage of you and your beloved persons." />
+   <meta property="og:image"
+      content="https://images.pexels.com/photos/1077469/pexels-photo-1077469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+   <meta property="og:type" content="website" />
+   <meta property="og:site_name" content="love.dupeloader.tech" />
+   <meta property="og:url" content="https://love.duploader.tech" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+   <!--Favicon-->
+   <link rel="apple-touch-icon" sizes="180x180"
+      href="https://duploader.tech/assets/favicon/apple-touch-icon.png?v=<?php echo time(); ?>" />
+   <link rel="icon" type="image/png" sizes="32x32"
+      href="https://duploader.tech/assets/favicon/favicon-32x32.png?v=<?php echo time(); ?>" />
+   <link rel="icon" type="image/png" sizes="16x16"
+      href="https://duploader.tech/assets/favicon/favicon-16x16.png?v=<?php echo time(); ?>" />
+   <link rel="icon" type="image/png" sizes="16x16"
+      href="https://duploader.tech/assets/favicon/android-chrome-192x192.png?v=<?php echo time(); ?>" />
+   <link rel="icon" type="image/png" sizes="16x16"
+      href="https://duploader.tech/assets/favicon/android-chrome-512x512.png?v=<?php echo time(); ?>" />
+   <link rel="manifest" href="https://duploader.tech/assets/favicon/site.webmanifest?v=<?php echo time(); ?>" />
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <div class="container d-flex  flex-column mb-3" id="cont">
+      <h1 class="text-center mb-4 block">Advanced Love Calculator</h1>
+      <form onsubmit="msg();" id="loveForm">
+         <div class="form-group">
+            <label for="name1">Enter Name 1:</label>
+            <input type="text" class="form-control" id="name1" name="name1" required />
+         </div>
+         <div class="form-group">
+            <label for="name2">Enter Name 2:</label>
+            <input type="text" class="form-control" id="name2" name="name2" required />
+         </div>
+         <button type="submit" class="cc">Calculate</button>
+         <p id="wait" style="display: none">Just wait!!! We are Calcuting....</p>
+      </form>
+      <div class="progress mt-4" style="display: none">
+         <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+      </div>
+      <div id="result" class="mt-4 text-center" style="display: none">
+         <h3 id="lovePercentage"></h3>
+         <button id="calculateAgainBtn">Calculate Again</button>
+      </div>
+   </div>
+   <script src="script.js"></script>
+	<script> 
+        var script = document.createElement("script");
+       script.async = true;
+       script.id = "chatbotscript";
+       script.dataset.accountid = '03IC1X/AO8u6vwumRYfrTg==';
+       script.dataset.websiteid = 'yKT3uIfa/Je/BxNfO/5HqQ==';
+       script.src = "https://app.robofy.ai/bot/js/encChatWidget.js?v=" + new Date().getTime();
+       document.head.appendChild(script);
+</script>
+</body>
+
+</html>

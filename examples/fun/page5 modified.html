@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Challenge 4</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .title {
+            margin: 20px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        button {
+            display: inline-block;
+            border: none;
+            margin: 12px;
+        }
+
+        #startButton {
+            margin-top: 50px;
+            height: 40px;
+            width: 130px;
+            background-color: aqua;
+            
+        }
+
+        #buttonContainer {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .click {
+            background-color: gray;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #timer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">This is the 4th Challenge Web</h1>
+    <p>Click only one button to win the challenge.</p>
+    <button id="startButton" onclick="startChallenge()">Start Challenge</button>
+    <div id="buttonContainer">
+        <!-- Buttons will be added here dynamically -->
+    </div>
+    <div id="timer">Time: 30</div>
+
+    <script>
+        let timer;
+        let startTime;
+
+        function startChallenge() {
+            document.getElementById("startButton").style.display = "none";
+            document.getElementById("buttonContainer").style.display = "flex";
+            startTime = Date.now();
+            timer = setInterval(updateTimer, 1000);
+            createButtons();
+        }
+
+        function createButtons() {
+            for (let i = 1; i <= 10; i++) {
+                const button = document.createElement("div");
+                button.classList.add("click");
+                button.textContent = "Button " + i;
+                button.addEventListener("click", checkButton);
+                document.getElementById("buttonContainer").appendChild(button);
+            }
+        }
+
+        function checkButton() {
+            const currentTime = Date.now();
+            const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+            if (elapsedSeconds < 30) {
+                alert("Wrong button, try again.");
+            } else {
+                alert("You won the challenge!");
+                clearInterval(timer);
+            }
+        }
+
+        function updateTimer() {
+            const currentTime = Date.now();
+            const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+            const remainingSeconds = 30 - elapsedSeconds;
+            document.getElementById("timer").textContent = "Time: " + remainingSeconds;
+
+            if (remainingSeconds <= 0) {
+                clearInterval(timer);
+                alert("Time's up! You didn't win the challenge.");
+                document.getElementById("startButton").style.display = "block";
+                document.getElementById("buttonContainer").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

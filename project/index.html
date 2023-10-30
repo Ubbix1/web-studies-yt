@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+    <a href="#" class="logo">Jungle</a>
+
+    <ul>
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#image-track">Animals</a></li>
+        <li><a href="">Contact</a></li>
+
+    </ul>
+</header>
+<section>
+    <h2 id="text"><span>It's Time for New</span> <br>Adventure</h2>
+        <img src="bird1.png" alt="" id="bird1">
+        <img src="bird2.png" alt="" id="bird2">
+        <img src="forest.png" alt="" id="forest">
+        <a href="" id="btn">Explore</a>
+        <img src="rocks.png" alt="" id="rocks">
+        <img src="water.png" alt="" id="Water">
+</section>
+
+
+<div class="about" id="about">
+    <h2> This is a Parallax website</h2>
+    <div class="paragraph">
+        <p>A parallax website is a type of web design that uses a technique called parallax scrolling to create an engaging and visually appealing user experience. This design approach is characterized by the background and foreground elements of a webpage moving at different speeds as the user scrolls down the page. The result is a 3D-like effect that adds depth and dimension to the website, making it more interactive and immersive.
+        </p>
+    
+    <p id="para1">Scrolling Depth: Parallax websites typically have multiple layers of content, images, or graphics that move at different speeds as the user scrolls. This creates a sense of<br> depth and perspective, making the website feel dynamic and engaging.</p>
+    <p id="para2">Scrolling Depth: Parallax websites typically have multiple layers of content, images, or graphics that move at different speeds as the user scrolls. This creates a sense of<br> depth and perspective, making the website feel dynamic and engaging.</p>
+</div>
+</div>
+<br>
+<br>
+
+<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <img class="imagess" src="lion.jpg" alt="" draggable="false">
+    <img class="imagess" src="tiger.jpg" alt="" draggable="false">
+    <img class="imagess" src="elephant.jpg" alt="" draggable="false">
+    <img class="imagess" src="ostrich.jpg" alt="" draggable="false">
+    <img class="imagess" src="giraffe.jpg" alt="" draggable="false">
+    <img class="imagess" src="gorilla.jpg" alt="" draggable="false">
+    <img class="imagess" src="cheetah.jpg" alt="" draggable="false">
+    <img class="imagess" src="bear.jpg" alt="" draggable="false">
+</div>
+
+
+<!-- <script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water');
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + '%';
+        bird1.style.top= value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+        header.style.top = value * 0.5 + 'px';
+        
+
+
+    }) -->
+    <!-- <script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water');
+    let header = document.getElementById('header');
+
+    function parallax() {
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + '%';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+        header.style.top = value * 0.5 + 'px';
+
+        requestAnimationFrame(parallax);
+    }
+
+    // Call the parallax function to start the animation
+    parallax();
+
+
+</script> -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

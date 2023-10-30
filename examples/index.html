@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Elements</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Set the height as needed */
+            background: url('/pictures/pic2.webp') center/cover;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Adjust the overlay color as needed */
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .medium-circle {
+            width: 100px;
+            height: 100px;
+            background: url('/pictures/pic5.webp') center/cover;
+            border-radius: 50%;
+            cursor: pointer;
+            pointer-events: none; /* This allows the mouse to interact with elements beneath the circle */
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div class="medium-circle"></div>
+        </div>
+    </div>
+
+    <script>
+        const circle = document.querySelector('.medium-circle');
+
+        // Add a mousemove event listener to update the circle's position
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Set the circle's position to the mouse coordinates
+            circle.style.left = x - 50 + 'px'; // Adjust for circle width
+            circle.style.top = y - 50 + 'px';  // Adjust for circle height
+        });
+    </script>
+</body>
+</html>

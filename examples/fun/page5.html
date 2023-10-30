@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>page4</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .title {
+            margin-top: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: rgb(0, 0, 0);
+        }
+
+        .light-mode {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        button {
+            margin: 12px;
+        }
+
+        .def {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            margin-right: 0;
+            display: inline-block;
+        }
+
+        .click {
+            display: inline-block;
+            margin-top: 4px;
+            height: 40px;
+        }
+
+        .click:hover {
+            color: red;
+        }
+
+        #start-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">This is the 4th challenge web</h1>
+    <p>Click only one button to win the challenge</p>
+    <button id="start-button" onclick="startChallenge()">Start Challenge</button>
+    <div class="def">
+        <button class="l" onclick="lightMode()">Light Mode</button>
+    </div>
+    <div id="button-container"></div>
+    <script>
+        function darkMode() {
+            let element = document.body;
+            element.className = "dark-mode";
+        }
+
+        function lightMode() {
+            let element = document.body;
+            element.className = "light-mode";
+        }
+
+        function startChallenge() {
+            document.getElementById("start-button").style.display = "none";
+            document.getElementById("button-container").innerHTML = generateButtons(30);
+        }
+
+        function generateButtons(count) {
+            let buttonsHTML = '';
+            for (let i = 1; i <= count; i++) {
+                buttonsHTML += `<button class="click" onclick="checkButton(${i})">Button ${i}</button>`;
+            }
+            return buttonsHTML;
+        }
+
+        function checkButton(buttonNumber) {
+            if (buttonNumber === 1) {
+                alert("Congratulations! You won the challenge!");
+            } else {
+                alert("Wrong button. Try again.");
+                startChallenge(); // Reset the challenge
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("start-button").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'Tango';
+	src: url(../fonts/TangoBT.ttf);
+	font-weight: 100;
+	font-style: normal;
+}
+
+.navbar {
+    font-size: large;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+	font-family: 'Tango', sans-serif !important;
+}
+
+.navbar-brand h2 {
+	font-size: 42px !important;	
+	margin: 0;
+}
+
+.search-bar:focus {
+    box-shadow: none;
+}
+
+.hamburger-btn{
+    border: none;
+}
+
+.hamburger-btn:focus {
+    border: none;
+    box-shadow: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: large;
+}
+
+a:hover {
+    color: #ddd;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Background Image</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Set the height as needed */
+            background: url('/ayan.jpg') center/cover;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Adjust the overlay color as needed */
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .medium-circle {
+            width: 100px;
+            height: 100px;
+            background: url('/pictures/pic3.webp') center/cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div class="medium-circle"></div>
+        </div>
+    </div>
+</body>
+</html>

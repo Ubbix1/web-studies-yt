@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		page4
+	</title>
+	<style>
+		body {
+			padding: 25px;
+			background-color: rgb(0, 0, 0);
+			color: rgb(255, 255, 255);
+			font-size: 25px;
+            margin-top: 0;
+		}
+        .title{ 
+            margin-top: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+		.dark-mode {
+			background-color: black;
+			color: rgb(0, 0, 0);
+		}
+
+		.light-mode {
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+            
+		}
+        button{
+            margin-left: 1100px;
+            display: inline-block;
+            border: none;
+            margin: 12px;
+        }
+        .d{
+            margin-left: 0;
+        }
+        .def{
+            display: grid;
+            grid-template-columns: 100px 100px;
+            margin-right: 0;
+            display: inline-block;
+        }
+        .click{
+            display: inline-block;
+            /* margin-left: 1103px; */
+            margin-top: 4px;
+           
+            height: 40px;
+        }
+        .click:hover{
+            color: red;
+        }
+	</style>
+</head>
+
+<body>
+	<h1 class="title">Find Button on this page challenge to Next Level</h1>
+    
+	<h3 id="DarkModetext"></h3>
+	<button class="light-mode" id="DarkModetext" onclick="darkMode()">Dark mode</button>
+    <div class="def">
+	<button class="l" onclick="lightMode()">LightMode</button>
+    
+</div>
+	<script>
+		function darkMode() {
+			let element = document.body;
+			let content = document.getElementById("DarkModetext");
+			element.className = "dark-mode";
+			content.innerText = "";
+		}
+		function lightMode() {
+			let element = document.body;
+			let content = document.getElementById("DarkModetext");
+			element.className = "light-mode";
+			content.innerText = "";
+		}
+	</script>
+</body>
+</html>
